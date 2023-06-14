@@ -1,0 +1,277 @@
+body { 
+    margin: auto;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    z-index: 5;
+    background-color:aliceblue;
+    padding-top: 20px;
+    margin-bottom: -35px;
+    padding-bottom: 20px;
+}
+/*fix active state*/
+
+.topnav a:hover {
+    color:darkcyan;
+}
+
+.topnav .icon {
+    display: none;
+  }
+
+/*Background image and home header and adjust pixels to em or rem - em is relative to container, rem to whole document and relative where possible*/
+
+.homeheader {
+    height: 70vh;
+    width: 100vw;
+    background-image: url("https://www.rbb24.de/content/dam/rbb/rbb/rbb24/2023/2023_05/dpa-account/260569798.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: auto 1000px;
+    text-align: center;
+    vertical-align: center;
+}
+
+.homeheader h1{
+    position:relative;
+    top: 240px;
+    font-size: 50px
+
+}
+
+.homeheader h2{
+    position:relative;
+    top: 250px;
+    font-size: 30px;
+}
+
+
+.intro {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr ;
+    grid-template-rows: 0.25fr 0.25fr; 
+    grid-template-areas:
+    ". p ."
+    ". button .";
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.intro p {
+    grid-area: p;
+}
+
+.intro button {
+    grid-area: button;
+    width:fit-content;
+    justify-self: center;
+    background-color: darkcyan;
+    color: white;
+    font-size: 15px;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.intro button:hover {
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+}
+
+.body-1, .body-3 {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.body-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.body-1 img, .body-2 img, .body-3 img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin: 20px;
+    border-radius: 50%;
+}
+
+.page-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://images.unsplash.com/photo-1563470655738-f3d66790cae9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1412&q=80");
+    background-position: center; 
+    height: 30vh;
+    width: 100vw;
+}
+
+.page-header h1 {
+    font-size: 50px;
+}
+
+.body-copy {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.body-copy button {
+    display: flex;
+    justify-content: center;
+    padding-top: 0px;
+    background-color: darkcyan;
+    color: white;
+    font-size: 15px;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.body-copy button:hover {
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+}
+
+
+#table-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    width: 80%;
+    background-color: aliceblue;
+    
+  }
+
+th, td {
+    border: 1px solid;
+    text-align: center;
+    vertical-align: center;
+}
+
+td img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+
+th {
+    height: 50px;
+}
+
+#reg-grid {
+    display: grid;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 0%;
+    grid-template-columns: repeat(3 , 1fr) ;
+    grid-template-rows: 1fr 0.5fr 0.25fr 0.05fr; 
+    grid-template-areas:
+    "form1 form2 form3"
+    "textform textform textform"
+    "submit submit submit"
+    ". terms .";
+}
+
+.form-intro {
+    grid-area: intro;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.forminfo {
+    grid-area: form1;
+    align-content: center;
+    text-align: center;
+    padding: 10%;
+}
+
+.radioform {
+    grid-area: form2;
+    align-content: center;
+    text-align: center;
+    padding: 10%;
+}
+
+.checkboxform {
+    grid-area: form3;
+    align-content: center;
+    text-align: center;
+    padding: 10%;
+}
+
+.textform {
+    grid-area: textform;
+    align-content: center;
+    text-align: center;
+    padding: 1%;
+}
+
+.resizedtextbox {
+    width: 300px;
+    height: 100px;
+}
+
+.submitbutton {
+    grid-area: submit;
+    align-content: center;
+    text-align:center;
+    padding: 20px;
+}
+
+.radioform,.forminfo, .checkboxform, .textform, .submitbutton {
+    background-color:aliceblue;
+}
+
+.terms {
+    display: grid;
+    grid-area: terms;
+    justify-content: center;
+    font-size:12px;
+    text-align: center;
+    padding: 20px;
+}
+
+.map {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    background-color:aliceblue;
+    height: 75px;
+    width: 100vw;
+    text-indent: 50px;
+}
+
+footer p {
+    position: relative;
+    top: 20px;
+}
